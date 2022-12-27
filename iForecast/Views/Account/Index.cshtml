@@ -1,0 +1,18 @@
+﻿@model iForecast.Entities.User
+@{
+    ViewData["Title"] = "Account";
+}
+<h1>Account</h1>
+    <h2>Welcome!</h2>
+    <h3>Please Enter Your User ID:</h3>
+    <form method="post" asp-action="MyAccount">
+        <div class="form-group">
+            <label asp-for="Id" class="control-label"></label>
+            <input type="text" asp-for="Id" class="form-control" />
+            <span asp-validation-for="Id" class="text-danger"></span>
+        </div>
+        <div class="from-group">
+            <input type="submit" value="Submit" class="btn btn-primary" />
+        </div>
+    </form>
+
