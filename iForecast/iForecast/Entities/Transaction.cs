@@ -15,8 +15,6 @@ namespace iForecast.Entities
         public decimal Amount { get; set; }
         [Required]
         public string SubAccountId { get; set; } = null!;
-        [NotMapped]
-        public SubAccount SubAccount { get; set; } = null!;
         public Transaction()
         {
             this.Id = Guid.NewGuid().ToString();

@@ -1,6 +1,3 @@
-using iForecast.Services.Data;
-using Microsoft.EntityFrameworkCore;
-
 namespace iForecast
 {
     public class Program
@@ -11,10 +8,7 @@ namespace iForecast
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
-            builder.Services.AddDbContext<DataContext>(options =>
-            {
-                options.UseSqlServer(builder.Configuration.GetConnectionString("development"));
-            });
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
